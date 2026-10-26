@@ -23,8 +23,14 @@ public class QuoteDisplay {
             System.out.println("Enter 1 - 10 to display a quote: ");
             int inputIndex = scanner.nextInt();
 
+            inputIndex--;
 
+            System.out.println(quotes[inputIndex]);
         }
-
+        catch (Exception e) {
+            System.out.println("Number not in range");
+            e.printStackTrace();
+        }
+        scanner.close();
     }
 }
